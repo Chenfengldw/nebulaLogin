@@ -1,0 +1,6 @@
+setup.py
+LDAPTools.egg-info/PKG-INFO
+LDAPTools.egg-info/SOURCES.txt
+LDAPTools.egg-info/dependency_links.txt
+LDAPTools.egg-info/requires.txt
+LDAPTools.egg-info/top_level.txt
