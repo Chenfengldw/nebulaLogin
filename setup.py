@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages 
 setup(
     name = 'nebulaLogin',
-    version = '0.5',
+    version = '0.6',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
@@ -12,7 +12,7 @@ setup(
         'Programming Language :: Python :: 2.7',
       ],
     license = 'MIT License',
-    install_requires = ['gcc','python-ldap'],
+    install_requires = ['python-ldap'],
  
     author = 'kevindwliu',
     author_email = 'kevindwliu@outlook.com',

@@ -137,7 +137,7 @@ class LDAPTool(object):
 	try:
 	    f = open('max_uid.txt','r')
 	    last_max = int(f.read())
-	    return last_max
+	    return last_max # if max uid already in max_uid.txt,return it
 	except IOError,e:
 	    print e
 	    	    
@@ -145,7 +145,7 @@ class LDAPTool(object):
 	    if f:
 		f.close()
 
-
+        #max uid not in max_uid.txt,means it will be the first user added
         obj = self.ldapconn
         obj.protocal_version = ldap.VERSION3
         searchScope = ldap.SCOPE_SUBTREE
@@ -160,7 +160,7 @@ class LDAPTool(object):
                 attrlist=retrieveAttributes
             )
             #result_set = [i]
-            result = 0
+            result = ldapAdmin.init_uid
 	    while True:
                 result_type, result_data = obj.result(ldap_result, 0)
                 if not result_data:

@@ -52,7 +52,22 @@ $ python
 ```
 
 
+# 2. APIs
 
+#### class  ldapTool2.LDAPTool(object) methods:
+
+```
+ldap_search_dn(self, value=None, value_type='uid')
+ldap_add_user(self, cn, mail, username, password)
+check_user_belong_to_group(self, uid, group_cn='kevindwliu')
+ldap_get_user(self, uid=None)
+```
+
+#### login package methods:
+
+```
+LDAPlogin(userName,password)
+```
 
 
 

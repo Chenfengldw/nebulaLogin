@@ -1,1 +1,4 @@
 ERROR:root:test1 login failed: {'desc': u'Invalid credentials'}
+ERROR:root:add user test failed，because: {'desc': u'Already exists'}
+ERROR:root:add user test0 failed，because: {'desc': u'Already exists'}
+ERROR:root:add user test1 failed，because: {'desc': u'Already exists'}
