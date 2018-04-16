@@ -6,7 +6,8 @@
 
 ## pre-dependencies
 #
-#### Install pip
+#### Install pip()
+This is developed with python2 so please use pip2 if you also have python3 
 #
   ```python
 $  wget https://bootstrap.pypa.io/get-pip.py
