@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
+#!python2
 import ldap
 import ldap.modlist as modlist
+import pandas
 
 import pdb
 import logging
@@ -212,7 +214,7 @@ class LDAPTool(object):
             ldif = ldap.modlist.addModlist(attrs)
 #           pdb.set_trace()
 	    obj.add_s(addDN, ldif)
-            obj.unbind_s()
+            #obj.unbind_s()
             result = True
 	    
 	    print('add user success!')
@@ -288,3 +290,17 @@ class LDAPTool(object):
         except ldap.LDAPError, e:
             logging.error("%s reset password failed，because: %s" % (uid, str(e)))
         return result
+
+    def add_by_csv(self,filename):
+	
+	data = pandas.read_csv(filename)
+	cn = data['username']
+	mail = data['email']
+	password = data['password']
+	
+	for i in range(len(cn)):
+	    self.ldap_add_user(cn[i],mail[i],cn[i],password[i])
+	
+
+    def close_ldap_conn(self):
+	self.ldapconn.unbind_s()

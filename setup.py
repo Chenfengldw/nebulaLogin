@@ -12,7 +12,7 @@ setup(
         'Programming Language :: Python :: 2.7',
       ],
     license = 'MIT License',
-    install_requires = ['python-ldap'],
+    install_requires = ['python-ldap','pandas'],
  
     author = 'kevindwliu',
     author_email = 'kevindwliu@outlook.com',

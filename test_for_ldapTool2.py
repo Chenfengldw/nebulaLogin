@@ -12,6 +12,5 @@ print("get user test")
 r=t.ldap_get_user(uid='test')
 print('get user result: %s' %r)
 
-for i in range(2):
-        name = 'test'+str(i)
-        t.ldap_add_user(name,name+'@qq.com',name,name)
+print('add by csv test')
+t.add_by_csv('test.csv')
