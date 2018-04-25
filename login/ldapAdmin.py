@@ -1,7 +1,7 @@
 class settings:
-	AUTH_LDAP_SERVER_URI='ldap://107.167.176.120'
+	AUTH_LDAP_SERVER_URI=''
 	AUTH_LDAP_BIND_DN='cn=admin,dc=c,dc=majestic-lead-196504,dc=internal'
-	AUTH_LDAP_BIND_PASSWORD='admin'
+	AUTH_LDAP_BIND_PASSWORD=''
 	base_dn='dc=c,dc=majestic-lead-196504,dc=internal'
         log_path = 'ldap.log'
 	init_uid = 1400
