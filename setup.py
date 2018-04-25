@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages 
 setup(
     name = 'nebulaLogin',
-    version = '0.8',
+    version = '0.9',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
