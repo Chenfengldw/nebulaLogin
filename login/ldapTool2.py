@@ -48,7 +48,7 @@ class LDAPTool(object):
         except ldap.LDAPError, e:
             logging.error('ldap conn failed，because: %s' % str(e))
 
-    def ldap_search_dn(self, value=None, value_type='uid'):
+    def ldap_search_dn(self, value, value_type='uid'):
         """
         :param value: uid or group cn
         :param value_type: user uid|cn
@@ -58,10 +58,10 @@ class LDAPTool(object):
         obj.protocal_version = ldap.VERSION3
         searchScope = ldap.SCOPE_SUBTREE
         retrieveAttributes = None
-        if value_type == 'cn':
-            searchFilter = "cn=" + value
+        if(value!=None):
+            searchFilter = "%s=%s" %(value_type,value)
         else:
-            searchFilter = "uid=" + value
+            searchFilter = None
         try:
             ldap_result_id = obj.search(
                 base=self.base_dn,
@@ -84,7 +84,7 @@ class LDAPTool(object):
         """
         result = None
         try:
-            search = self.ldap_search_dn(value=uid, value_type=uid)
+            search = self.ldap_search_dn(value=uid, value_type='uid')
             if search is None:
                 raise ldap.LDAPError('corresponding id not found')
             for user in search:
@@ -230,7 +230,9 @@ class LDAPTool(object):
 	except ldap.LDAPError, e:
             print('add user failed:%s'% str(e))
 	    logging.error("add user %s failed，because: %s" % (username, str(e)))
+	    return False
         return result
+
 
     def check_user_belong_to_group(self, uid, group_cn='kevindwliu'):
         """

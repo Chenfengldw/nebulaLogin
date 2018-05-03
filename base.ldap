@@ -1,0 +1,7 @@
+dn: ou=people,dc=starcloud,dc=ai
+objectClass:organizationalUnit
+ou: people
+
+dn: ou=groups,dc=starcloud,dc=ai
+objectClass: organizationalUnit
+ou: groups

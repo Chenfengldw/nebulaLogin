@@ -1,6 +1,0 @@
-setup.py
-nebulaLDAPTools.egg-info/PKG-INFO
-nebulaLDAPTools.egg-info/SOURCES.txt
-nebulaLDAPTools.egg-info/dependency_links.txt
-nebulaLDAPTools.egg-info/requires.txt
-nebulaLDAPTools.egg-info/top_level.txt

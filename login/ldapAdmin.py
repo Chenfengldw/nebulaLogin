@@ -1,8 +1,8 @@
 class settings:
-	AUTH_LDAP_SERVER_URI=''
-	AUTH_LDAP_BIND_DN='cn=admin,dc=c,dc=majestic-lead-196504,dc=internal'
-	AUTH_LDAP_BIND_PASSWORD=''
-	base_dn='dc=c,dc=majestic-lead-196504,dc=internal'
+        AUTH_LDAP_SERVER_URI='ldap://localhost:30389'
+	AUTH_LDAP_BIND_DN='cn=admin,dc=starcloud,dc=ai'
+	AUTH_LDAP_BIND_PASSWORD='admin'
+	base_dn='dc=starcloud,dc=ai'
         log_path = 'ldap.log'
 	init_uid = 1400
 	def __init__(self,uri=None,binddn=None,password=None,basedn=None,log_path=None,init_uid=None):
