@@ -1,5 +1,5 @@
 class settings:
-        AUTH_LDAP_SERVER_URI='ldap://localhost:30389'
+        AUTH_LDAP_SERVER_URI='ldap://10.140.0.6:30389'
 	AUTH_LDAP_BIND_DN='cn=admin,dc=starcloud,dc=ai'
 	AUTH_LDAP_BIND_PASSWORD='admin'
 	base_dn='dc=starcloud,dc=ai'

@@ -1,7 +1,0 @@
-ERROR:root:get user admin failed，because: corresponding id not found
-ERROR:root:add user test2 failed，because: {'info': u'modifications require authentication', 'desc': u'Strong(er) authentication required'}
-ERROR:root:ldap search None failed, because: {'desc': u'Protocol error'}
-ERROR:root:ldap search test failed, because: {'desc': u"Can't contact LDAP server"}
-ERROR:root:ldap search test103 failed, because: {u'info': 'Resource temporarily unavailable', 'errno': 11, 'desc': u"Can't contact LDAP server"}
-ERROR:root:ldap search test103 failed, because: {u'info': 'Resource temporarily unavailable', 'errno': 11, 'desc': u"Can't contact LDAP server"}
-ERROR:root:ldap search None failed, because: {'desc': u'Protocol error'}
